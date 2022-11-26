@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <title>LifeSpot</title>
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+    <!-- Подключение Javascript внутри страницы-->
+    <script type="text/javascript" src="../Static/JS/index.js"></script>
+    <!--Внутренний скрипт с вызовами функций-->
+    <script>
+        // Проверка на возраст
+        checkAge();
+
+        // сохранение сессии
+        handleSession();
+
+        // вывод данных сессии в консоль
+        sessionLog();
+
+        // Реклама
+        setTimeout(function () { alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Instagram @lifespot999!" ) }, 30000);
+    </script>
 </head>
 <body>
     <header id="header-index">
@@ -12,19 +28,14 @@
         <!--Параграф-->
         <p>Покажем, что происходит прямо сейчас</p>
         <!--Строка поиска-->
-        <input type="text" size="70" placeholder="Введите наименование видео для поиска на странице"/>
+        <input type="text" oninput="filterContent();" size=50% placeholder="Введите наименование видео для поиска на странице" />
     </header>
-    <aside id="sidebar">
-        <div class="navbar">
-            <a href="/"><p>Все трансляции</p></a>
-            <a href="/"><p>О проекте</p></a>
-        </div>
-    </aside>
+    <!--SIDEBAR-->
     <main>
         <!--Лондон-->
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>Лондон</iframe>
-            <h3 class="video-title">Видео записано с камеры автобуса.</h3>
+            <h3 class="video-title">Лондон. Видео записано с камеры автобуса.</h3>
         </div>
 
         <!--Санкт-Петербург-->
@@ -39,11 +50,6 @@
             <h3 class="video-title">Улицы Берлина.</h3>
         </div>
     </main>
-    <footer>
-        <div>
-            <p>LifeSpot - все права защищены</p>
-            <p>Связаться с нами: contact@lifespot.ru</p>
-        </div>
-    </footer>
+    <!--FOOTER-->
 </body>
 </html>

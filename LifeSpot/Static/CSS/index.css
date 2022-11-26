@@ -72,3 +72,67 @@ header, footer, body, main {
     background-color: rgb(238, 218, 187);
 }
 
+/*.review-container,
+*/
+/*.review-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+*/
+.review-text{
+    display: block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+/*
+    ---------------------------------------------------------------------------------
+*/
+
+a.review-button {
+    position: relative; /*Положение элемента устанавливается относительно его исходного места.*/
+    display: inline-block;
+    color: #777674;
+    font-weight: bold; /*Насыщенность шрифта задаётся с помощью ключевых слов: bold — полужирное начертание*/
+    text-decoration: none;
+    text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px; /*Добавляет тень к тексту, а также устанавливает её параметры: цвет тени, смещение относительно надписи и радиус размытия*/
+    user-select: none;
+    padding: 1em 2em; /*поля вокруг содержимого элемента*/
+    outline: none;
+    border-radius: 3px / 100%;
+    background-image: linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%), linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)), linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)), linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)), linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5)), linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5));
+    background-repeat: no-repeat;
+    background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+    background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+    box-shadow: rgba(0,0,0,.5) 3px 10px 10px -10px;
+}
+
+/* Псевдокласс :hover срабатывает, когда пользователь наводит на элемент мышью*/
+a.review-button:hover {
+    transition: .5s linear;
+    background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+}
+
+/* Псевдокласс :active соответствует элементу в момент, когда он активируется пользователем */
+a.review-button:active {
+    top: 1px;
+}
+
+/*
+    -------------------------------
+*/
+.review-button-test {
+    position: relative;
+    display: inline-block;
+    color: #777674;
+    font-weight: bold;
+    text-decoration: none;
+    user-select: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    sans-serif;
+    border-block-color: #418c5a;
+}
