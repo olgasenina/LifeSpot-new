@@ -8,17 +8,13 @@
     <script type="text/javascript" src="../Static/JS/index.js"></script>
     <!--Внутренний скрипт с вызовами функций-->
     <script>
-        // Проверка на возраст
-        checkAge();
+        // обработка сессии
+        handleSession(logger, checker);
 
-        // сохранение сессии
-        handleSession();
-
-        // вывод данных сессии в консоль
-        sessionLog();
-
-        // Реклама
-        setTimeout(function () { alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Instagram @lifespot999!" ) }, 30000);
+        // функция для получения пользовательского ввода    
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
     </script>
 </head>
 <body>
